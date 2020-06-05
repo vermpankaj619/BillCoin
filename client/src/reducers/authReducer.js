@@ -14,12 +14,13 @@ export default function(state = initialState, action) {
       return {
         ...state,
         isAuthenticated: !isEmpty(action.payload),
-        user: action.payload
+        user: action.payload,
+        loading: true
       };
     case USER_LOADING:
       return {
         ...state,
-        loading: true
+       
       };
     default:
       return state;
